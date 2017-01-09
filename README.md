@@ -7,13 +7,17 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 $ sudo npm install -g angular-cli
 ```
 
-## install
+## Install
 ```bash
 $ npm install
 ```
 
-## Start Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Start (Dev)
+```bash
+$ ng serve
+```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
