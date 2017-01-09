@@ -16,6 +16,11 @@ $ sudo npm install -g angular-cli
 ```bash
 $ npm install
 ```
+During the install, 
+* select 'Yes, extend my current settings.',
+* then 'Automatic'
+* then 'Yes'
+* Then press Enter.
 
 ## Start (Dev)
 ```bash
