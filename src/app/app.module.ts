@@ -12,6 +12,7 @@ import { SimpleRedditComponent } from './simple-reddit/simple-reddit.component';
 import { HomeComponent } from './home/home.component';
 
 import { NgSemanticModule } from 'ng-semantic';
+import { RedditArticleComponent } from './reddit-article/reddit-article.component';
 
 const appRoutes: Routes = [
   { component: HomeComponent, path: '' },
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     UserItemComponent,
     UserListComponent,
     SimpleRedditComponent,
-    HomeComponent
+    HomeComponent,
+    RedditArticleComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

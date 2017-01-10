@@ -12,4 +12,8 @@ export class SimpleRedditComponent implements OnInit {
   ngOnInit() {
   }
 
+  addArticle(title: HTMLInputElement, link: HTMLInputElement) {
+    console.log(`Add article: title: ${title.value} and link: ${link.value}`);
+    return false;
+  }
 }

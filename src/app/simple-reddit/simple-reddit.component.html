@@ -6,12 +6,14 @@
   <div class="main ui container">
      <form class="ui form">
          <div class="field">
-     	    <sm-input label="Title"  placeholder="Title..."></sm-input>
+           <label for="title">Title</label>
+     	    <input label="Title"  placeholder="Title..." name="title" #newtitle/>
          </div>
          <div class="field">
-     	    <sm-input label="Link"  placeholder="Link..."></sm-input>
+           <label for="link">Link</label>
+     	    <input label="Link"  placeholder="Link..." name="link" #newlink/>
          </div>
-         <sm-button  class="primary">Submit</sm-button>
+         <sm-button  class="primary"  (click)="addArticle(newtitle, newlink)">Submit</sm-button>
      </form>
   </div>
 </div>
