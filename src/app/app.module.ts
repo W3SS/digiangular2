@@ -8,11 +8,11 @@ import { NgSemanticModule } from 'ng-semantic';
 
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
-import { UserItemComponent } from './user-item/user-item.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { RedditSimpleComponent } from './reddit-simple/reddit-simple.component';
+import { RedditSimpleComponent } from './reddit/reddit-simple.component';
 import { HomeComponent } from './home/home.component';
-import { RedditArticleComponent } from './reddit-article/reddit-article.component';
+import { RedditArticleComponent } from './reddit/reddit-article.component';
+import { UserItemComponent } from './user/user-item.component';
+import { UserListComponent } from './user/user-list.component';
 
 const appRoutes: Routes = [
   { component: HomeComponent, path: '' },
@@ -29,7 +29,9 @@ const appRoutes: Routes = [
     UserListComponent,
     RedditSimpleComponent,
     HomeComponent,
-    RedditArticleComponent
+    RedditArticleComponent,
+    UserItemComponent,
+    UserListComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

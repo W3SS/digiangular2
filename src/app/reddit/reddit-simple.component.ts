@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { RedditArticle } from '../reddit-article/reddit-article.model';
+import { RedditArticle } from './reddit-article.model';
 
 @Component({
   selector: 'app-reddit-simple',

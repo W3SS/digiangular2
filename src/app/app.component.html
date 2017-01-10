@@ -2,7 +2,7 @@
   <sm-menu title="DigiAngular2" class="inverted" logoClass="home icon">
 
     <sm-menu class="menu left secondary mobile hidden">
-      <a class="item" href="#/">
+      <a class="item" [routerLink]="['/']" routerLinkActive="active">
         <i class="home icon"></i>
         Home
       </a>
@@ -26,7 +26,7 @@
   </sm-menu>
 
   <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>
-    <a class="item" href="#/">
+    <a class="item" [routerLink]="['/']" routerLinkActive="active">
       <i class="home icon"></i>
       Home
     </a>
