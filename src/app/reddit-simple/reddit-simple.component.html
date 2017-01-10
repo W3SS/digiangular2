@@ -4,22 +4,35 @@
     <div class="ui divider"></div>
   </div>
   <div class="main ui container">
-     <form class="ui form">
-         <div class="field">
-           <label for="title">Title</label>
-     	    <input label="Title"  placeholder="Title..." name="title" #newtitle/>
-         </div>
-         <div class="field">
-           <label for="link">Link</label>
-     	    <input label="Link"  placeholder="Link..." name="link" #newlink/>
-         </div>
-         <sm-button  class="primary"  (click)="addArticle(newtitle, newlink)">Submit</sm-button>
-     </form>
+
+    <form class="ui form" [formGroup]="form">
+      <sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
+      <div class="field">
+        <sm-input label="Title" class="left" [control]="form.get('titleControl')" placeholder="Enter a title..."></sm-input>
+        <div class="text red" *ngIf="form.get('titleControl').touched && form.get('titleControl').hasError('required')">
+          Title is required
+        </div>
+        <div class="text red" *ngIf="form.get('titleControl').touched && form.get('titleControl').hasError('minlength')">
+          Minimum of 4 characters
+        </div>
+      </div>
+      <div class="field">
+        <sm-input  class="left labeled" label="Link"  [control]="form.get('linkControl')" placeholder="Enter a link/url..."></sm-input>
+        <div class="text red" *ngIf="form.get('linkControl').touched && form.get('linkControl').hasError('required')">
+          Link is required
+        </div>
+        <div class="text red" *ngIf="form.get('linkControl').touched && form.get('linkControl').hasError('minlength')">
+          Minimum of 4 characters
+        </div>
+      </div>
+      <sm-button (click)="addArticle()" [disabled]="!form.valid" class="primary">Add</sm-button>
+    </form>
+
      <div class="ui divider"></div>
      <div class="ui cards">
        <app-reddit-article *ngFor = "let article of articles"
                  [article] = "article">
        </app-reddit-article>
-     </div>
+    </div>
   </div>
 </div>

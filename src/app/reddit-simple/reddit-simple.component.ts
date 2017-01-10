@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { RedditArticle } from '../reddit-article/reddit-article.model';
 
 @Component({
@@ -9,21 +10,32 @@ import { RedditArticle } from '../reddit-article/reddit-article.model';
 export class RedditSimpleComponent implements OnInit {
   articles: RedditArticle[] = [];
 
-  constructor() {
+  form: FormGroup;
+  formFeedback: FormGroup;
+  formSubmited: boolean = false;
+
+
+  constructor(fb: FormBuilder) {
     this.articles.push(new RedditArticle('SemanticUI', 'http://semantic-ui.com'));
     this.articles.push(new RedditArticle('Learn Angular2', 'http://learnangular2.com', 3));
+
+    this.form = fb.group({
+      titleControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+      linkControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
+    });
   }
 
   ngOnInit() {
   }
 
-  addArticle(title: HTMLInputElement, link: HTMLInputElement) {
-    console.log(`Add article: title: ${title.value} and link: ${link.value}`);
-    this.articles.push(new RedditArticle(title.value, link.value));
+  addArticle() {
+    this.formSubmited = true;
+    console.log(`Add article: ${JSON.stringify(this.form.value)}`);
+    this.articles.push(new RedditArticle(this.form.value['titleControl'], this.form.value['linkControl']));
 
-    title.value = '';
-    link.value = '';
-    
+    this.form.reset();
+
+    this.formSubmited = false;
     return false;
   }
 }
