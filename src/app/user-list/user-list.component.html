@@ -1,8 +1,14 @@
-<div class="main ui container">
-  <ul>
-    <app-user-item
-      *ngFor = "let name of names"
-      [name] = "name">
-    </app-user-item>
-  </ul>
+<div class="ui masthead vertical segment">
+    <div class="ui container">
+    	<h1>User List</h1>
+      <div class="ui divider"></div>
+    </div>
+    <div class="main ui container">
+      <ul>
+        <app-user-item
+          *ngFor = "let name of names"
+          [name] = "name">
+        </app-user-item>
+      </ul>
+    </div>
 </div>

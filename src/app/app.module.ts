@@ -8,19 +8,17 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { UserListComponent } from './user-list/user-list.component';
-<<<<<<< HEAD
 import { SimpleRedditComponent } from './simple-reddit/simple-reddit.component';
-=======
 import { HomeComponent } from './home/home.component';
 
-import { NgSemanticModule } from "ng-semantic";
+import { NgSemanticModule } from 'ng-semantic';
 
 const appRoutes: Routes = [
-    { component: HomeComponent, path: "" },
-    { component: HelloWorldComponent, path: "hello" },
-     { component: UserListComponent, path: "userlist" }
-  ];
->>>>>>> 1e8569a32d81cbb374fe3ef7b7c32f3e18cfaf13
+  { component: HomeComponent, path: '' },
+  { component: HelloWorldComponent, path: 'hello' },
+  { component: UserListComponent, path: 'userlist' },
+  { component: SimpleRedditComponent, path: 'simplereddit' }
+];
 
 @NgModule({
   declarations: [
@@ -28,11 +26,8 @@ const appRoutes: Routes = [
     HelloWorldComponent,
     UserItemComponent,
     UserListComponent,
-<<<<<<< HEAD
-    SimpleRedditComponent
-=======
+    SimpleRedditComponent,
     HomeComponent
->>>>>>> 1e8569a32d81cbb374fe3ef7b7c32f3e18cfaf13
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
