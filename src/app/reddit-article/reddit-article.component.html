@@ -1,3 +1,14 @@
-<p>
-  reddit-article works!
-</p>
+<div class="ui card">
+  <div class="content">
+      <i class="right floated thumbs up icon" (click)="article.voteUp()"></i>
+      <i class="right floated thumbs down icon" (click)="article.voteDown()"></i>
+    <div class="header">{{ article.title }}</div>
+    <div class="description">
+      <p><a href="{{ article.link }}" target="_blank">{{ article.link }}</a></p>
+    </div>
+  </div>
+  <div class="extra content">
+          <i class="check icon"></i>
+          {{ article.votes }} Vote(s)
+  </div>
+</div>

@@ -1,0 +1,11 @@
+.card {
+  margin: .875em .5em;
+}
+
+.ui.card:first-child {
+  margin-top: .875em;
+}
+
+.ui.card:last-child {
+  margin-bottom: .875em;
+}

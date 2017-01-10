@@ -15,5 +15,11 @@
          </div>
          <sm-button  class="primary"  (click)="addArticle(newtitle, newlink)">Submit</sm-button>
      </form>
+     <div class="ui divider"></div>
+     <div class="ui cards">
+       <app-reddit-article *ngFor = "let article of articles"
+                 [article] = "article">
+       </app-reddit-article>
+     </div>
   </div>
 </div>

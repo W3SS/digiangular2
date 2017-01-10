@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RedditArticle } from './reddit-article.model';
 
 @Component({
   selector: 'app-reddit-article',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reddit-article.component.css']
 })
 export class RedditArticleComponent implements OnInit {
+  @Input() article: RedditArticle;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  voteUp(): boolean {
+    this.article.voteUp();
+
+    return false;
+  }
+
+  voteDown(): boolean {
+    this.article.voteDown();
+
+    return false;
   }
 
 }

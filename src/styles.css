@@ -31,3 +31,10 @@
         display: none !important;
     }
 }
+
+/* HIghlight vote up and down on cards*/
+
+.ui.card > .content .thumbs.icon:hover, .ui.cards > .card > .content .thumbs.icon:hover {
+    opacity: 1;
+    color: #FF2733
+}

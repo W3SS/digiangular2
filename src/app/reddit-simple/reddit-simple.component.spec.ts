@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SimpleRedditComponent } from './simple-reddit.component';
+import { RedditSimpleComponent } from './reddit-simple.component';
 
-describe('SimpleRedditComponent', () => {
-  let component: SimpleRedditComponent;
-  let fixture: ComponentFixture<SimpleRedditComponent>;
+describe('RedditSimpleComponent', () => {
+  let component: RedditSimpleComponent;
+  let fixture: ComponentFixture<RedditSimpleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimpleRedditComponent ]
+      declarations: [ RedditSimpleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimpleRedditComponent);
+    fixture = TestBed.createComponent(RedditSimpleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
