@@ -1,11 +1,19 @@
 # Digiangular2
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+It uses Semantic UI, TypeScript, Angular2, and shows some tutorials. Semantic UI does not offer a collapsing menu on mobile, so we have a desktop menu and a mobile sidebar depending on the device.
 
 ### On desktop
 ![Image on Desktop](images/desktop.png)
 ### On mobile (with sidebar)
 ![Image on Mobile](images/mobile.png)
+
+## The Content
+* HelloWorld -- Mandatory (?) exercise.
+* Home -- Display some info text.
+* User Item -- Define a component ```<app-user-item></app-user-item>``` that display available user information.
+* User List -- Parse an array and displays a series of ```<app-user-item>```.
+* Simple Reddit -- Add article with form validation and basic voting.
 
 ## Prerequisites
 ```bash
@@ -28,6 +36,7 @@ $ ng serve
 ```
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
