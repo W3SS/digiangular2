@@ -11,6 +11,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 
 ## Content
 * __Home__ -- Display static test.
+* __Menu Component__ -- Users an array of JSON object to generate a Desktop menu and a Mobile sidebar / hamburger menu.
 * __HelloWorld__ -- Mandatory (?) exercise.
 * __User Item__ -- Define a component ```<app-user-item name=''></app-user-item>``` that display a name.
 * __User List__ -- Loop through an array and display a series of ```<app-user-item>```.
