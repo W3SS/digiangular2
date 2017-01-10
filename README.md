@@ -1,7 +1,8 @@
 # Digiangular2
 
+Project that uses Semantic UI, ngSemantic, TypeScript, Angular2, and shows different tutorials. Semantic UI does not offer a collapsing menu on mobile, so we have a desktop menu and a mobile sidebar depending on the device.
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
-It uses Semantic UI, TypeScript, Angular2, and shows some tutorials. Semantic UI does not offer a collapsing menu on mobile, so we have a desktop menu and a mobile sidebar depending on the device.
 
 ### On desktop
 ![Image on Desktop](images/desktop.png)
@@ -9,11 +10,11 @@ It uses Semantic UI, TypeScript, Angular2, and shows some tutorials. Semantic UI
 ![Image on Mobile](images/mobile.png)
 
 ## The Content
-* HelloWorld -- Mandatory (?) exercise.
-* Home -- Display some info text.
-* User Item -- Define a component ```<app-user-item></app-user-item>``` that display available user information.
-* User List -- Parse an array and displays a series of ```<app-user-item>```.
-* Simple Reddit -- Add article with form validation and basic voting.
+* __Home__ -- Display static test.
+* __HelloWorld__ -- Mandatory (?) exercise.
+* __User Item__ -- Define a component ```<app-user-item name=''></app-user-item>``` that display a name.
+* __User List__ -- Loop through an array and display a series of ```<app-user-item>```.
+* __Simple Reddit__ -- Add article with form validation and basic voting.
 
 ## Prerequisites
 ```bash
