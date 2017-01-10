@@ -2,8 +2,32 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### On desktop
+![Image on Desktop](images/desktop.png)
+### On mobile (with sidebar)
+![Image on Mobile](images/mobile.png)
+
+## Prerequisites
+```bash
+$ sudo npm install -g angular-cli
+```
+
+## Install
+```bash
+$ npm install
+```
+During the install, 
+* select 'Yes, extend my current settings.',
+* then 'Automatic'
+* then 'Yes'
+* Then press Enter.
+
+## Start (Dev)
+```bash
+$ ng serve
+```
+
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
