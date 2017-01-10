@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { RedditArticleComponent } from './reddit/reddit-article.component';
 import { UserItemComponent } from './user/user-item.component';
 import { UserListComponent } from './user/user-list.component';
+import { MenuComponent } from './menu.component';
 
 const appRoutes: Routes = [
   { component: HomeComponent, path: '' },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     HomeComponent,
     RedditArticleComponent,
     UserItemComponent,
-    UserListComponent
+    UserListComponent,
+    MenuComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

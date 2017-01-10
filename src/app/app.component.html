@@ -1,49 +1,5 @@
 <div class="full height">
-  <sm-menu title="DigiAngular2" class="inverted" logoClass="home icon">
-
-    <sm-menu class="menu left secondary mobile hidden">
-      <a class="item" [routerLink]="['/']" routerLinkActive="active">
-        <i class="home icon"></i>
-        Home
-      </a>
-      <a class="item" [routerLink]="['/hello']" routerLinkActive="active">
-        <i class="block comment icon"></i>
-        Hello World
-      </a>
-      <a class="item" [routerLink]="['/userlist']" routerLinkActive="active">
-        <i class="block user icon"></i>
-        User list
-      </a>
-      <a class="item" [routerLink]="['/redditsimple']" routerLinkActive="active">
-        <i class="block book icon"></i>
-        Simple Reddit
-      </a>
-    </sm-menu>
-    <sm-menu class="menu right secondary mobile only">
-      <a sm-item icon="sidebar" (click)="invertedSidebar.show({transition: 'overlay'})"></a>
-    </sm-menu>
-
-  </sm-menu>
-
-  <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>
-    <a class="item" [routerLink]="['/']" routerLinkActive="active">
-      <i class="home icon"></i>
-      Home
-    </a>
-    <a class="item" [routerLink]="['/hello']" routerLinkActive="active" (click)="invertedSidebar.show({transition: 'overlay'})">
-      <i class="block comment icon"></i>
-      Hello World
-    </a>
-    <a class="item" [routerLink]="['/userlist']" routerLinkActive="active" (click)="invertedSidebar.show({transition: 'overlay'})">
-      <i class="block user icon"></i>
-      User list
-    </a>
-    <a class="item" [routerLink]="['/redditsimple']" routerLinkActive="active" (click)="invertedSidebar.show({transition: 'overlay'})">
-      <i class="block book icon"></i>
-      Simple Reddit
-    </a>
-  </sm-sidebar>
-
+  <app-menu></app-menu>
   <div class="article">
     <router-outlet></router-outlet>
   </div>
