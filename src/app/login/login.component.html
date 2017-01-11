@@ -1,0 +1,22 @@
+<div class="ui masthead vertical segment">
+  <div class="ui container">
+  	<h1>Form Example</h1>
+    <div class="ui divider"></div>
+  </div>
+  <div class="main ui container">
+    <h4 class="ui header">Login</h4>
+
+    <div class="ui {{ messageClass }} message" *ngIf="message">{{ message}}</div>
+
+    <form class="ui form" [formGroup]="form">
+      <sm-loader [complete]="!formSubmited" class="inverted" text="Loading..."></sm-loader>
+      <div class="field">
+        <sm-input label="Name" icon="user" class="left" [control]="form.get('nameControl')" placeholder="Enter name..."></sm-input>
+      </div>
+      <div class="field">
+        <sm-input [type]="'password'" label="Password" icon="key" class="left" [control]="form.get('passwordControl')" placeholder="Password..."></sm-input>
+      </div>
+    <sm-button (click)="submit()" [disabled]="!form.valid" class="primary">Login</sm-button>
+    </form>
+  </div>
+</div>

@@ -14,12 +14,15 @@ import { RedditArticleComponent } from './reddit/reddit-article.component';
 import { UserItemComponent } from './user/user-item.component';
 import { UserListComponent } from './user/user-list.component';
 import { MenuComponent } from './menu.component';
+import { LoginComponent } from './login/login.component';
+import { ApiService } from './login/api.service';
 
 const appRoutes: Routes = [
   { component: HomeComponent, path: '' },
   { component: HelloWorldComponent, path: 'hello' },
   { component: UserListComponent, path: 'userlist' },
-  { component: RedditSimpleComponent, path: 'redditsimple' }
+  { component: RedditSimpleComponent, path: 'redditsimple' },
+  { component: LoginComponent, path: 'login'}
 ];
 
 @NgModule({
@@ -33,7 +36,8 @@ const appRoutes: Routes = [
     RedditArticleComponent,
     UserItemComponent,
     UserListComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -43,7 +47,7 @@ const appRoutes: Routes = [
     HttpModule,
     NgSemanticModule
   ],
-  providers: [],
+  providers: [ ApiService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

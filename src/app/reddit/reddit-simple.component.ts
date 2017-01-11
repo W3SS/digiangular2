@@ -11,7 +11,6 @@ export class RedditSimpleComponent implements OnInit {
   articles: RedditArticle[] = [];
 
   form: FormGroup;
-  formFeedback: FormGroup;
   formSubmited: boolean = false;
 
 
