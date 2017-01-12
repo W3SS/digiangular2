@@ -2,12 +2,13 @@
   <div class="ui container">
     <h1>Form Example</h1>
     <div class="ui divider"></div>
+    <div class="ui success message" *ngIf="api.getUser()">Welcome {{ api.getUser() }}</div>
     <div class="ui {{ messageClass }} message" *ngIf="message">{{ message}}</div>
   </div>
-  <div class="main ui container" [hidden]="!loggedIn">
+  <div class="main ui container" [hidden]="!api.isLoggedIn()">
     <sm-button (click)="logout()" class="primary">Logout</sm-button>
   </div>
-  <div class="main ui container" [hidden]="loggedIn">
+  <div class="main ui container" [hidden]="api.isLoggedIn()">
     <h4 class="ui header">Login</h4>
 
 

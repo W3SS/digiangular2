@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   formSubmited: boolean = false;
   message: string = '';
   messageClass: string;
-  loggedIn: boolean = false;
 
   constructor(fb: FormBuilder, private api: ApiService) {
 
@@ -22,8 +21,6 @@ export class LoginComponent implements OnInit {
       passwordControl: ['', Validators.compose([Validators.required, Validators.minLength(4)])],
     });
 
-    this.loggedIn = api.isLoggedIn();
-    console.log(`loggedIn ${this.loggedIn}`);
   }
 
   ngOnInit() {
@@ -32,17 +29,14 @@ export class LoginComponent implements OnInit {
   submit() {
     console.log(this.form.value['passwordControl']);
     this.formSubmited = true;
-    this.loggedIn = this.api.isLoggedIn();
     this.api.login(this.form.value['nameControl'], this.form.value['passwordControl'], (success: boolean) => {
       this.formSubmited = false;
       this.messageClass = success ? 'positive' : 'negative';
       this.message = success ? 'Success! You logged in' : 'Check your username and password';
-      this.loggedIn = true;
     });
   }
 
   logout() {
     this.api.logout();
-    this.loggedIn = false;
   }
 }

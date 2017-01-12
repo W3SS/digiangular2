@@ -11,7 +11,7 @@ export class ApiService {
     console.log('ApiService created!');
   }
 
-  login(username: string, password: string, callback?: Function) {
+  login(username: string, password: string, callback?: Function): void {
     console.log(`Calling login API service... for user ${username}`);
     this.http.get(ApiService.url)
       .subscribe(data => {
@@ -29,12 +29,16 @@ export class ApiService {
       });
   }
 
-  logout() {
+  logout(): void {
     sessionStorage.removeItem(ApiService.KEY);
     console.log('logout ' + sessionStorage.getItem(ApiService.KEY));
   }
 
-  isLoggedIn() {
+  getUser(): string {
+    return sessionStorage.getItem(ApiService.KEY);
+  }
+
+  isLoggedIn(): boolean {
     return sessionStorage.getItem(ApiService.KEY) !== null;
   }
 
