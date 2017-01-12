@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class ApiService {
-  static url: string = 'https://jsonplaceholder.typicode.com/photos';
-  static urlError: string = 'https://news.google.com';
+  static url: string = 'http://localhost:3000/';
   static KEY: string = 'username';
+  private token: string;
 
   constructor(private http: Http) {
     console.log('ApiService created!');
@@ -13,19 +13,33 @@ export class ApiService {
 
   login(username: string, password: string, callback?: Function): void {
     console.log(`Calling login API service... for user ${username}`);
-    this.http.get(ApiService.url)
+    let bodyString = { 'username': username, 'password': password }; // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+
+    this.http.post(ApiService.url + 'authenticate', bodyString, options)
       .subscribe(data => {
-        console.log('Success');
-        // To simulate a long process
-        setTimeout(function () {
-          sessionStorage.setItem(ApiService.KEY, username);
-          if (callback) { callback(true); }
-        }.bind(this), 2000);
+        try {
+          this.token = JSON.parse(data['_body']).token;
+          console.log(`Success ... valid token ${this.token}`);
+        } catch (e) {
+          console.error('Login token issue: '+JSON.stringify(e));
+          this.token = '';
+        }
+        sessionStorage.setItem(ApiService.KEY, username);
+        if (callback) { callback(true); }
       },
       error => {
-        console.error('ERROR login failed');
+        console.error('ERROR login failed ' + JSON.stringify(error));
+        var message;
+        try {
+          message = JSON.parse(error['_body']).message;
+        } catch (e) {
+          message = JSON.stringify(error);
+        }
+        console.log('ERROR login failed ' + message);
         sessionStorage.removeItem(ApiService.KEY);
-        if (callback) { callback(false); }
+        if (callback) { callback(false, message); }
       });
   }
 

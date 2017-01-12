@@ -29,10 +29,10 @@ export class LoginComponent implements OnInit {
   submit() {
     console.log(this.form.value['passwordControl']);
     this.formSubmited = true;
-    this.api.login(this.form.value['nameControl'], this.form.value['passwordControl'], (success: boolean) => {
+    this.api.login(this.form.value['nameControl'], this.form.value['passwordControl'], (success: boolean, message:string) => {
       this.formSubmited = false;
       this.messageClass = success ? 'positive' : 'negative';
-      this.message = success ? 'Success! You logged in' : 'Check your username and password';
+      this.message = success ? 'Success! You logged in' : message;
     });
   }
 

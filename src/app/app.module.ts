@@ -16,13 +16,15 @@ import { UserListComponent } from './user/user-list.component';
 import { MenuComponent } from './menu.component';
 import { LoginComponent } from './login/login.component';
 import { ApiService } from './login/api.service';
+import { ResourcesComponent } from './protected/resources/resources.component';
 
 const appRoutes: Routes = [
   { component: HomeComponent, path: '' },
   { component: HelloWorldComponent, path: 'hello' },
   { component: UserListComponent, path: 'userlist' },
   { component: RedditSimpleComponent, path: 'redditsimple' },
-  { component: LoginComponent, path: 'login'}
+  { component: LoginComponent, path: 'login'},
+  { component: ResourcesComponent, path: 'protected/resources'}
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     UserItemComponent,
     UserListComponent,
     MenuComponent,
-    LoginComponent
+    LoginComponent,
+    ResourcesComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
