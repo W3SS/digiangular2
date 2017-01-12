@@ -1,6 +1,7 @@
 # Digiangular2
 
 Project that uses Semantic UI, ngSemantic, TypeScript, Angular2, and shows different tutorials. Semantic UI does not offer a collapsing menu on mobile, so we have a desktop menu and a mobile sidebar depending on the device.
+
 The project includes a quick API using Node and Express with token based authentication.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
