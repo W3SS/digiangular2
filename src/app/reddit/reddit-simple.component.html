@@ -1,6 +1,6 @@
 <div class="ui masthead vertical segment">
   <div class="ui container">
-  	<h1>Add a link</h1>
+    <h1>Add a link</h1>
     <div class="ui divider"></div>
   </div>
   <div class="main ui container">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="field">
-        <sm-input  class="left labeled" label="Link"  [control]="form.get('linkControl')" placeholder="Enter a link/url..."></sm-input>
+        <sm-input class="left labeled" label="Link" [control]="form.get('linkControl')" placeholder="Enter a link/url..."></sm-input>
         <div class="text red" *ngIf="form.get('linkControl').touched && form.get('linkControl').hasError('required')">
           Link is required
         </div>
@@ -28,11 +28,9 @@
       <sm-button (click)="addArticle()" [disabled]="!form.valid" class="primary">Add</sm-button>
     </form>
 
-     <div class="ui divider"></div>
-     <div class="ui cards">
-       <app-reddit-article *ngFor = "let article of articles"
-                 [article] = "article">
-       </app-reddit-article>
+    <div class="ui divider"></div>
+    <div class="ui cards">
+      <app-reddit-article *ngFor="let article of articles" [article]="article"></app-reddit-article>
     </div>
   </div>
 </div>

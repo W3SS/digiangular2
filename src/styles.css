@@ -1,3 +1,6 @@
+/* ngIf */
+[hidden] { display: none !important;}
+
 /* You can add global styles to this file, and also import other style files */
 @media only screen and (max-width: 767px) {
     .mobile.hidden,

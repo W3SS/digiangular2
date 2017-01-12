@@ -1,7 +1,6 @@
 <sm-menu title="DigiAngular2" class="inverted" logoClass="home icon">
   <sm-menu class="menu left secondary mobile hidden">
-    <a sm-item *ngFor="let item of items" class="item"
-      [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a sm-item *ngFor="let item of items" class="item" [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       <i class="{{ item.icon }} icon"></i>
       {{ item.name }}
     </a>
@@ -12,9 +11,7 @@
 </sm-menu>
 
 <sm-sidebar class="left vertical inverted sidebar labeled icon menu" #invertedSidebar>
-  <a *ngFor="let item of items" class="item"
-    [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
-    (click)="invertedSidebar.show({transition: 'overlay'})">
+  <a *ngFor="let item of items" class="item" [routerLink]="item.routerLink" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="invertedSidebar.show({transition: 'overlay'})">
     <i class="{{ item.icon }} icon"></i>
     {{ item.name }}
   </a>
