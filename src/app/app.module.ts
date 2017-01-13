@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { LoggedInGuard } from './login/loggedIn.guard';
 import { NgSemanticModule } from 'ng-semantic';
 
 import { AppComponent } from './app.component';
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   { component: UserListComponent, path: 'userlist' },
   { component: RedditSimpleComponent, path: 'redditsimple' },
   { component: LoginComponent, path: 'login'},
-  { component: ResourcesComponent, path: 'protected/resources'}
+  { component: ResourcesComponent, path: 'protected/resources', canActivate: [LoggedInGuard]}
 ];
 
 @NgModule({
@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     HttpModule,
     NgSemanticModule
   ],
-  providers: [ ApiService ],
+  providers: [ ApiService, LoggedInGuard ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

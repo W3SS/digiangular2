@@ -23,7 +23,7 @@ export class ApiService {
           this.token = JSON.parse(data['_body']).token;
           console.log(`Success ... valid token ${this.token}`);
         } catch (e) {
-          console.error('Login token issue: '+JSON.stringify(e));
+          console.error('Login token issue: ' + JSON.stringify(e));
           this.token = '';
         }
         sessionStorage.setItem(ApiService.KEY, username);
@@ -31,7 +31,7 @@ export class ApiService {
       },
       error => {
         console.error('ERROR login failed ' + JSON.stringify(error));
-        var message;
+        let message = '';
         try {
           message = JSON.parse(error['_body']).message;
         } catch (e) {

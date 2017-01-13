@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../login/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-resources',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResourcesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public api: ApiService, private router: Router) {
+  }
 
   ngOnInit() {
   }
 
+  logout() {
+    this.api.logout();
+    this.router.navigate(['/login']);
+  }
 }
