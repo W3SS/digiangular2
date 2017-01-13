@@ -1,8 +1,10 @@
 # Digiangular2
 
-Project that uses Semantic UI, ngSemantic, TypeScript, Angular2, and shows different tutorials. Semantic UI does not offer a collapsing menu on mobile, so we have a desktop menu and a mobile sidebar depending on the device.
-
-The project includes a quick API using Node and Express with token based authentication.
+Project that uses:
+* __Semantic UI / ngSemantic__
+* __TypeScript__
+* __Angular2__
+* __Express__ to simulate a simple REST API with Web Token authentication
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
@@ -19,6 +21,8 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 * __User List__ -- Loop through an array and display a series of ```<app-user-item>```.
 * __Simple Reddit__ -- Add article with form validation and basic voting.
 * __REST API__ -- In the ```server``` directory, you can launch your API server using ```node index.js```. ```http://localhost:3000/api``` points to the API, ```/api/authenticate``` to login, and ```/api/resources``` needs a valid token.
+* __Protected Content__ -- Uses token on the server side and canActivate on the client. On the client, this is more about navigation than security; the API provides the security.
+
 ## Prerequisites
 ```bash
 $ sudo npm install -g angular-cli
