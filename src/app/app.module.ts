@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { LoggedInGuard } from './login/loggedIn.guard';
-import { NgSemanticModule } from 'ng-semantic';
+import { NgSemanticModule } from 'ng-semantic/ng-semantic';
 
 import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
