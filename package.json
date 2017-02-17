@@ -27,7 +27,7 @@
     "express": "^4.14.0",
     "express-session": "^1.14.2",
     "jsonwebtoken": "^7.2.1",
-    "ng-semantic": "^1.1.13",
+    "ng-semantic": "https://github.com/vladotesanovic/ngSemantic/tarball/master",
     "rxjs": "^5.0.1",
     "semantic-ui": "^2.2.7",
     "ts-helpers": "^1.1.1",
